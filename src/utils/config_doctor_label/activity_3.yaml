@@ -1,0 +1,112 @@
+activity_id: 3
+
+lgbm:
+  params:
+    objective: "multiclass"
+    num_class: 4
+    metric: "multi_logloss"
+    verbosity: -1
+    boosting_type: "gbdt"
+    num_threads: -1
+    seed: 0
+    max_depth: 9
+    learning_rate: 0.56
+    num_leaves: 298
+    min_child_samples: 56
+    lambda_l1: 16.31
+    lambda_l2: 56.96
+xgb:
+  params:
+    objective: "multi:softprob"
+    num_class: 4
+    eval_metric: 'mlogloss'
+    verbosity: 0
+    seed: 0
+    num_boost_round: 5000
+    eta: 1.37
+    max_depth: 5
+    min_child_weights: 0
+    subsample: 0.8
+    gamma: 1.6
+    lambda: 0.24
+    alpha: 0.63
+rf:
+  params:
+    bootstrap: True
+    random_state: 0
+    n_jobs: -1
+    verbose: 0
+    n_estimators: 194
+    max_depth: 5
+    min_samples_split: 8
+    max_features: 0.501
+mlp_2:
+  params:
+    early_stopping: true
+    random_state: 0
+    verbose: 0
+    alpha: 1
+    learning_rate_init: 0.001
+    max_iter: 200
+mlp_4:
+  params:
+    early_stopping: true
+    random_state: 0
+    verbose: 0
+    alpha: 1
+    learning_rate_init: 0.001
+    max_iter: 200
+mlp_8:
+  params:
+    early_stopping: true
+    random_state: 0
+    verbose: 0
+    alpha: 0.1
+    learning_rate_init: 0.01016
+    max_iter: 404
+logistic_l1:
+  params:
+    penalty: l1
+    solver: saga
+    random_state: 0
+    n_jobs: -1
+    verbose: 0
+    max_iter: 336
+    C: 431.89
+logistic_l2:
+  params:
+    penalty: l2
+    solver: saga
+    random_state: 0
+    n_jobs: -1
+    verbose: 0
+    max_iter: 336
+    C: 431.89
+svm_l1:
+  params:
+    penalty: l1
+    loss: squared_hinge
+    dual: false
+    C: 0.01
+    random_state: 0
+    max_iter: 1000
+    verbose: 0
+svm_l2:
+  params:
+    penalty: l2
+    loss: squared_hinge
+    dual: false
+    C: 0.01
+    random_state: 0
+    max_iter: 1000
+    verbose: 0
+knn:
+  params:
+    n_neighbors: 10
+    weights: distance
+    algorithm: auto
+    n_jobs: -1
+bayes:
+  params:
+    priors: null
+    var_smoothing: 0.000000009
